@@ -1,6 +1,6 @@
 export default {
   // Define `base` because this deploys to user.github.io/repo-name/
-  base: './',
+  base: '/phaser-stuff/',
   publicDir: 'assets',
   build: {
     // Do not inline images and assets to avoid the phaser error
