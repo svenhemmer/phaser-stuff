@@ -5,8 +5,9 @@ export const createTiledLoader = (scene: Phaser.Scene, config: TiledMapConfig): 
 
     return {
         preload: () => {
-            scene.load.image(config.img.key, '/' + config.img.path);
-            scene.load.tilemapTiledJSON(config.json.key, '/' + config.json.path);
+            const base = import.meta.env.PROD ? '/phaser-stuff/': '/';
+            scene.load.image(config.img.key, base + config.img.path);
+            scene.load.tilemapTiledJSON(config.json.key, base + config.json.path);
         },
         
         create: () => {
